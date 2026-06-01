@@ -18,4 +18,4 @@ jobs:
 
       - name: Copy files via SCP
         run: |
-          scp -r ./html/* ubuntu@${{ secrets.PROD_HOST }}:/var/www/html/
+          scp -o StrictHostKeyChecking=no -r ./html/* ubuntu@${{ secrets.PROD_HOST }}:/var/www/html/
